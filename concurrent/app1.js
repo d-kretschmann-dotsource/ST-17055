@@ -40,7 +40,7 @@ async function main() {
   const ctClient = initializeClientInstance();
   for (let k = 0; k < 100; k += 1) {
     const time = Date.now();
-    const r = await ctClient.products().withKey({ key: '630a4cdc-118c-11ed-861d-0242ac120002' }).get().execute();
+    const r = await ctClient.products().withKey({ key: process.env.PRODUCT_KEY }).get().execute();
 
     // console.log({ took: Date.now() - time, status: r.statusCode });
     output.push({ took: Date.now() - time, status: r.statusCod })

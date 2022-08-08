@@ -7,7 +7,7 @@ services:
       - ../.env
     volumes:
       - ./.data:/usr/one/.data
-    cpus: "0.5"
+    cpus: 0.5
     mem_limit: 512m
 
   app2:
@@ -16,5 +16,5 @@ services:
       - ../.env
     volumes:
       - ./.data:/usr/two/.data
-    cpus: "0.5"
+    cpus: 0.5
     mem_limit: 512m
